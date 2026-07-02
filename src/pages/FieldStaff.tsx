@@ -1,0 +1,2 @@
+import {workOrders} from '../data/mock';import Badge from '../components/Badge';
+export default function FieldStaff(){return <><h1>Saha Personeli Paneli</h1><div className="grid three">{workOrders.map(w=><div className="card" key={w.id}><h3>{w.title}</h3><p>{w.department}</p><p>Atanan: {w.assignee}</p><Badge text={w.status}/> <Badge text={w.priority}/><br/><br/><button className="btn">Göreve Başla</button> <button className="btn light">Fotoğraf Yükle</button></div>)}</div></>}

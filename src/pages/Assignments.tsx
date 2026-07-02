@@ -1,0 +1,2 @@
+import {applications,departments} from '../data/mock';import Table from '../components/Table';
+export default function Assignments(){return <><h1>Müdürlük Atama</h1><Table headers={['Başvuru','Mahalle','Mevcut Müdürlük','Yeni Müdürlük','Aksiyon']}>{applications.map(a=><tr key={a.id}><td>{a.title}</td><td>{a.neighborhood}</td><td>{a.department||'Yok'}</td><td><select>{departments.map(d=><option key={d}>{d}</option>)}</select></td><td><button className="btn">Ata</button></td></tr>)}</Table></>}

@@ -1,0 +1,1 @@
+export default function Notifications(){return <><h1>Bildirim Merkezi</h1>{['Yeni başvuru geldi','İş emri saha personeline atandı','SLA süresi yaklaşan kayıt var','Başvuru tamamlandı'].map((n,i)=><div className="card" key={n} style={{marginBottom:12}}><b>{n}</b><p className="muted">{i+1} dakika önce</p></div>)}</>}

@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom';import {workOrders} from '../data/mock';import Badge from '../components/Badge';import Table from '../components/Table';
+export default function WorkOrders(){return <><h1>İş Emirleri</h1><Table headers={['No','Başlık','Müdürlük','Personel','Durum','Öncelik','İşlem']}>{workOrders.map(w=><tr key={w.id}><td>{w.id}</td><td>{w.title}</td><td>{w.department}</td><td>{w.assignee}</td><td><Badge text={w.status}/></td><td><Badge text={w.priority}/></td><td><Link to={`/work-orders/${w.id}`}>Detay</Link></td></tr>)}</Table></>}

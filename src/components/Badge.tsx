@@ -1,0 +1,1 @@
+export default function Badge({text}:{text:string}){return <span className={`badge ${text.split(' ')[0]}`}>{text}</span>}

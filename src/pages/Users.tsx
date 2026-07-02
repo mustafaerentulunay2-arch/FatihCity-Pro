@@ -1,0 +1,2 @@
+import {users} from '../data/mock';import Table from '../components/Table';import Badge from '../components/Badge';
+export default function Users(){return <><h1>Kullanıcı Yönetimi</h1><button className="btn">Yeni Kullanıcı</button><br/><br/><Table headers={['Ad','E-posta','Rol','Müdürlük','Durum']}>{users.map(u=><tr key={u.id}><td>{u.name}</td><td>{u.email}</td><td>{u.role}</td><td>{u.department||'-'}</td><td><Badge text={u.active?'Tamamlandı':'Reddedildi'}/></td></tr>)}</Table></>}

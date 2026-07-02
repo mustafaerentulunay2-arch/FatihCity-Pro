@@ -1,0 +1,1 @@
+import {ReactNode} from 'react';export default function Table({headers,children}:{headers:string[];children:ReactNode}){return <div className="card table-wrap"><table className="table"><thead><tr>{headers.map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{children}</tbody></table></div>}
